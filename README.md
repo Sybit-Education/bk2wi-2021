@@ -7,7 +7,7 @@
 * [Node.js](https://nodejs.org/en/) v14 (LTS version): This has to be installed locally on development computer.
 * [Visual Studio Code](https://code.visualstudio.com/)
 * Modern WebBrowser: Chrome, Firefox, Edge, ...
-* Account fpr [Airtable](https://www.airtable.com)
+* Account for [Airtable](https://www.airtable.com)
 * [GitHub](https://github.com) Account
 
 ## Project setup
