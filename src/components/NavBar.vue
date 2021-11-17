@@ -7,7 +7,7 @@
     <b-container>
       <b-navbar-brand
         to="/"
-        title="event-app"
+        title="Event4U"
       >
         <b-img
           class="d-inline-block align-top"
@@ -15,7 +15,7 @@
           height="30"
           alt="event-app Logo"
         />
-        EvantApp
+        Event4U
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse" />

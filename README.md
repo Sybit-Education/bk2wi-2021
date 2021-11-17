@@ -1,4 +1,4 @@
-# Event App
+# Events4u App
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -6,9 +6,14 @@
 
 * [Node.js](https://nodejs.org/en/) v14 (LTS version): This has to be installed locally on development computer.
 * [Visual Studio Code](https://code.visualstudio.com/)
+*    install in Visual: Git Extension Pack 
 * Modern WebBrowser: Chrome, Firefox, Edge, ...
-* Account fpr [Airtable](https://www.airtable.com)
+* Account for [Airtable](https://www.airtable.com)
 * [GitHub](https://github.com) Account
+
+To get the project copie in GitHup (Code) the "HTTPS" link. 
+Then go to the "Clone Repository" and put the link inside the upcomming URL bar.
+After that you save the Projekt in a new folder.
 
 ## Project setup
 
