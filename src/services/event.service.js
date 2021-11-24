@@ -13,6 +13,11 @@ const eventService = {
       }
     })
     return resultList
+  },
+  async getEvent(id) {
+    const response = await airtableBase.get(`${TABLE_NAME}/${id}`)
+    const result = response.data.fields
+    return result
   }
 }
 
