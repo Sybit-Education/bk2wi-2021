@@ -12,6 +12,7 @@ const eventService = {
         ...item.fields
       }
     })
+    console.log('resultList', resultList)
     return resultList
   }
 }
