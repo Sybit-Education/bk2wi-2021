@@ -4,13 +4,11 @@
       <h2 class="event-list-item__title">
         {{ event.Eventname }}
       </h2>
-
-     <div class="event-list-item__location">
+      <div class="event-list-item__location">
         {{ event.location }}
       </div>
-        <div class="event-list-item__notes">
+      <div class="event-list-item__date">
         {{ event.Date }}
-
       </div>
     </div>
   </div>
