@@ -5,7 +5,10 @@
         {{ event.Eventname }}
       </h2>
       <div class="event-list-item__notes">
-        {{ event.Notes }}
+        {{ event.location }}
+      </div>
+        <div class="event-list-item__notes">
+        {{ event.Date }}
       </div>
     </div>
   </div>
