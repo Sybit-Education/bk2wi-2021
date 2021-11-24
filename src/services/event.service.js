@@ -15,9 +15,10 @@ const eventService = {
     console.log('resultList', resultList)
     return resultList
   },
-  async getEvent(id) {
+  async getEvent (id) {
     const response = await airtableBase.get(`${TABLE_NAME}/${id}`)
     const result = response.data.fields
+    console.log('result', result)
     return result
   }
 }
