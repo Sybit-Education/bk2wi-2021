@@ -12,7 +12,7 @@ const routes = [
   },
   {
     path: '/event/:id',
-    name: 'Imprint',
+    name: 'Eventdetail',
     component: () => import(/* webpackChunkName: "event" */ '../views/EventDetail.vue')
   },
   {
