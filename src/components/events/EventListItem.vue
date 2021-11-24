@@ -2,10 +2,13 @@
   <div>
     <div class="event-list-item mb-3">
       <h2 class="event-list-item__title">
-        {{ event.Name }}
+        {{ event.Eventname }}
       </h2>
-      <div class="event-list-item__notes">
-        {{ event.Notes }}
+      <div class="event-list-item__location">
+        {{ event.location }}
+      </div>
+      <div class="event-list-item__date">
+        {{ event.Date }}
       </div>
     </div>
   </div>
