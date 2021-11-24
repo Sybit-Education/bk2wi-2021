@@ -11,8 +11,14 @@
 import eventService from '../services/event.service'
 export default {
   name: 'EventDetail',
+  data () {
+    return {
+      event: {},
+      eventId: this.$route.params.id
+    }
+  },
   mounted () {
-    eventService.getEvent(this.$route.params.id)
+    this.event = eventService.getEvent(this.eventId)
   }
 }
 </script>
