@@ -4,8 +4,8 @@
       <h2 class="event-list-item__title">
         {{ event.Eventname }}
       </h2>
-      <div class="event-list-item__notes">
-        {{ event.Notes }}
+      <div class="event-list-item__location">
+        {{ event.location }}
       </div>
     </div>
   </div>
