@@ -2,7 +2,7 @@
   <div>
     <div class="event-list-item mb-3">
       <h2 class="event-list-item__title">
-        {{ event.Eventname }}
+      <b-link :to="eventLink"> {{ event.Eventname }}</b-link> 
       </h2>
       <div class="event-list-item__location">
         {{ event.location }}
@@ -10,6 +10,7 @@
       <div class="event-list-item__date">
         {{ event.Date }}
       </div>
+      
     </div>
   </div>
 </template>
@@ -20,6 +21,11 @@ export default {
     event: {
       type: Object,
       required: true
+    }
+  }, 
+  computed:{
+    eventLink(){
+      return '/event/'+  this.event.id
     }
   }
 }
