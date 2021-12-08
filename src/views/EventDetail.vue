@@ -1,14 +1,15 @@
 <template>
-  <div
-    v-once
-    class="privacy"
-  >
-    <h1>Event Detail</h1>
+  <div class="event-detail">
+    <h1>{{ event.Eventname }}</h1>
+    <b-row>
+      <b-col>Ort: {{ event.location }}</b-col>
+      <b-col>Datum: {{ event.Date }}</b-col>
+    </b-row>
   </div>
 </template>
 
 <script>
-import eventService from '../services/event.service'
+import eventService from '@/services/event.service'
 export default {
   name: 'EventDetail',
   data () {
@@ -18,7 +19,12 @@ export default {
     }
   },
   mounted () {
-    this.event = eventService.getEvent(this.eventId)
+    this.loadEvent()
+  },
+  methods: {
+    async loadEvent () {
+      this.event = await eventService.getEvent(this.eventId)
+    }
   }
 }
 </script>
