@@ -1,17 +1,16 @@
 <template>
-  <div>
-    <div class="event-list-item mb-3">
-      <h2 class="event-list-item__title">
-      <b-link :to="eventLink"> {{ event.Eventname }}</b-link>
-      </h2>
+   <b-link :to="eventLink">
+     <b-card
+      :title="event.Eventname"
+      class="event-list-item mb-3">
       <div class="event-list-item__location">
         {{ event.location }}
       </div>
       <div class="event-list-item__date">
         {{ event.Date }}
       </div>
-    </div>
-  </div>
+    </b-card>
+  </b-link>
 </template>
 <script>
 export default {
@@ -29,3 +28,9 @@ export default {
   }
 }
 </script>
+<style scoped>
+.event-list-item{
+  background-color: rgba(112, 108, 108, 0.199);
+  color: black;
+}
+</style>
