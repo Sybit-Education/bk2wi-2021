@@ -4,9 +4,10 @@
     class="home"
   >
     <h1>Home</h1>
-   <b-input-group size="lg" >
-    <b-form-input placeholder="Serach..." type="search"></b-form-input>
-  </b-input-group>
+   <SearchBar hint="Search hint" :text="searchPhrase" @textChange="onTextChanged" @submit="onSubmit" />
+
+
+<SearchBar v-model="searchQuery" />
     <event-list   />
   </div>
 </template>
