@@ -58,7 +58,7 @@
         <b-col>Datum: {{ event.Date }}</b-col>
         <b-col>Beschreibung: {{ event.Description }}</b-col><br>
         <b-row>
-      <b-button variant="success" href="#">Beitreten</b-button>
+      <b-button variant="success" href="/" target="_self">Zurück zur Startseite</b-button>
       </b-row>
   </div>
 </template>
