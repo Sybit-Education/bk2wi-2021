@@ -43,16 +43,7 @@
           >
         </template>
       </b-carousel-slide>
-
-      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
-      </b-carousel-slide>
     </b-carousel>
-
 
         <b-col>Ort: {{ event.location }}</b-col>
         <b-col>Datum: {{ event.Date }}</b-col>
