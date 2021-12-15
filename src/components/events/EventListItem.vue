@@ -9,9 +9,6 @@
       <div class="event-list-item__date">
         {{ event.Date }}
       </div>
-      <div class="event-list-item__description">
-        {{ event.Description }}
-      </div>
     </b-card>
   </b-link>
 </template>
