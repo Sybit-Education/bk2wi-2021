@@ -1,8 +1,8 @@
 <template>
   <div class="event-list">
-    <div class="event-list__header" />
-
-    <event-list-item v-for="event in events" :key="event.id" :event="event" />
+    <b-overlay :show="isLoading" rounded="sm">
+      <event-list-item v-for="event in events" :key="event.id" :event="event" />
+    </b-overlay>
   </div>
 </template>
 <script>
@@ -16,7 +16,8 @@ export default {
   },
   data () {
     return {
-      events: []
+      events: [],
+      isLoading: true
     }
   },
   mounted () {
@@ -25,6 +26,7 @@ export default {
   methods: {
     async loadEvents () {
       this.events = await eventService.getList()
+      this.isLoading = false
     }
   }
 }
