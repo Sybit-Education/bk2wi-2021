@@ -1,14 +1,11 @@
 <template>
-  <div
-    v-once
-    class="privacy"
-  >
+  <div v-once class="privacy">
     <h1>Datenschutz</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Privacy'
+  name: 'PrivacyView'
 }
 </script>
