@@ -32,11 +32,24 @@
                 </b-nav-form>
               <b-button variant="outline-success" class="my-2 my-sm-0" type="submit">Search</b-button>
             </b-navbar>
-          <b-navbar >
             <b-nav-item >
-            placeholder tag
+              Samstagabend
             </b-nav-item>
-          </b-navbar>
+            <b-nav-item >
+              Freitagabend
+            </b-nav-item>
+            <b-nav-item >
+              Club
+            </b-nav-item>
+            <b-nav-item >
+              Ü18
+            </b-nav-item>
+            <b-nav-item >
+              Mit Alkoholverkauf
+            </b-nav-item>
+            <b-nav-item >
+              Festivals
+            </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-container>
