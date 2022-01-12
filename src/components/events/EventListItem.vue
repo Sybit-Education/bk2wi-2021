@@ -12,8 +12,8 @@
         </b-col>
         <b-col>
           <h3>{{ event.Eventname }}</h3>
-          <div class="event-list-item__date">Datum: {{ event.Date }}</div>
-          <div class="event-list-item__Time">Uhrzeit: {{ event.Time }}</div>
+          <div class="event-list-item__date">Datum: {{ eventDate }}</div>
+          <div class="event-list-item__Time">Uhrzeit: {{ eventTime }}</div>
           <div class="event-list-item__location">Wo: {{ event.location }}</div>
         </b-col>
       </b-row>
@@ -32,6 +32,18 @@ export default {
   computed: {
     eventLink () {
       return '/event/' + this.event.id
+    },
+    eventDate () {
+      const options = {
+        weekday: 'short',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      }
+      return new Date(this.event.Date).toLocaleDateString('de-DE', options)
+    },
+    eventTime () {
+      return new Date(this.event.Time * 1000).toISOString().substr(11, 5)
     }
   }
 }

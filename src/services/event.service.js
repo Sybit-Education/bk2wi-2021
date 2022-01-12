@@ -8,10 +8,7 @@ const eventService = {
     const resultList = []
     airtableBase(TABLE_NAME)
       .select({
-        view: ACTIVE_VIEW,
-        cellFormat: 'string', // required to format times readable
-        userLocale: 'de-DE',
-        timeZone: 'Europe/Berlin'
+        view: ACTIVE_VIEW
       })
       .eachPage(
         function page (partialRecords, fetchNextPage) {
