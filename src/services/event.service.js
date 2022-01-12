@@ -36,20 +36,22 @@ const eventService = {
     console.log('resultList', resultList)
     return resultList
   },
-  getEvent (id) {
+  async getEvent (id) {
     console.log('getEvent', id)
-    airtableBase(TABLE_NAME).find(id, function (err, record) {
-      if (err) {
-        console.error(err)
-        return null
-      } else {
-        const result = {
-          id: record.id,
-          ...record.fields
-        }
-        console.log('result', result)
-        return result
-      }
+    return new Promise((resolve, reject) => {
+      airtableBase(TABLE_NAME)
+        .find(id, function (err, record) {
+          if (err) {
+            console.error(err)
+            reject(err)
+          }
+          const result = {
+            id: record.id,
+            ...record.fields
+          }
+          console.log('result', result)
+          resolve(result)
+        })
     })
   }
 }

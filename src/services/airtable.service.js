@@ -1,5 +1,4 @@
-
-const Airtable = require('airtable')
+import Airtable from 'airtable'
 
 const airtableBase = new Airtable({
   apiKey: process.env.VUE_APP_AIRTABLE_API_KEY

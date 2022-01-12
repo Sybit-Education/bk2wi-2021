@@ -47,12 +47,18 @@ export default {
   name: 'EventDetailView',
   data () {
     return {
-      event: {},
+      event: null,
       eventId: this.$route.params.id
     }
   },
-  async mounted () {
-    this.event = await eventService.getEvent(this.eventId)
+  mounted () {
+    this.loadEvent(this.eventId)
+  },
+  methods: {
+    async loadEvent (id) {
+      this.event = await eventService.getEvent(id)
+      console.log(this.event)
+    }
   }
 }
 </script>
