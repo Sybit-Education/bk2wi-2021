@@ -3,11 +3,14 @@
      <b-card
       :title="event.Eventname"
       class="event-list-item mb-3">
-      <div class="event-list-item__location">
-        {{ event.location }}
-      </div>
       <div class="event-list-item__date">
-        {{ event.Date }}
+       Datum: {{ event.Date }}
+      </div>
+      <div class="event-list-item__Time">
+       Uhrzeit: {{ event.Time }}
+      </div>
+      <div class="event-list-item__location">
+       Wo: {{ event.location }}
       </div>
     </b-card>
   </b-link>
