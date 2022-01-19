@@ -81,8 +81,8 @@ export default {
     return {
       searchbar
     }
-  }
-  ,methods: {
+  },
+  methods: {
     async searchEvents () {
       this.events = await eventService.getSearchList(this.searchbar)
       this.isLoading = false

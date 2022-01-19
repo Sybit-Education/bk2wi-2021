@@ -5,17 +5,16 @@ const ACTIVE_VIEW = 'published'
 
 const eventService = {
 
-  getSearchList(category) {
+  getSearchList (category) {
     console.log(category)
 
     const resultList = []
     airtableBase(TABLE_NAME)
-    
+
       .select({
-        view: ACTIVE_VIEW, 
+        view: ACTIVE_VIEW,
         filterByFormula: `SEARCH('${category}',{Eventname})`
 
-         
       })
       .eachPage(
         function page (partialRecords, fetchNextPage) {
@@ -39,7 +38,6 @@ const eventService = {
       )
     console.log('resultList', resultList)
     return resultList
-
   },
   getList () {
     const resultList = []
@@ -88,7 +86,7 @@ const eventService = {
         })
     })
   },
-  save(event) {
+  save (event) {
     console.log('save', event)
     return new Promise((resolve, reject) => {
       airtableBase(TABLE_NAME)

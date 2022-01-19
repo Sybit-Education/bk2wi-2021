@@ -1,5 +1,8 @@
 <template>
-  <b-form class="event-form">
+  <b-form
+    class="event-form"
+    @submit.prevent="saveEvent"
+  >
     <b-form-group
       label="Name"
       label-for="name"
@@ -26,7 +29,7 @@
     >
       <b-form-input
         id="date"
-        v-model="event.date"
+        v-model="event.Date"
         required
         type="date"
       />
@@ -44,7 +47,6 @@
     <b-button
       type="submit"
       variant="primary"
-      @click="saveEvent"
     >
       Speichern
     </b-button>
@@ -60,7 +62,9 @@ export default {
       event: {
         Eventname: '',
         location: '',
-        Description: ''
+        Date: null,
+        Description: '',
+        Status: 'Überprüfung'
       }
     }
   },
