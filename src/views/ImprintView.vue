@@ -1,5 +1,8 @@
 <template>
-  <div v-once class="imprint">
+  <div
+    v-once
+    class="imprint"
+  >
     <h1>Impressum</h1>
   </div>
 </template>

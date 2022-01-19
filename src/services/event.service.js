@@ -1,9 +1,9 @@
-import { base } from 'airtable'
 import airtableBase from './airtable.service'
 const TABLE_NAME = 'Event'
 const ACTIVE_VIEW = 'published'
 
 const eventService = {
+
   getSearchList(category) {
     console.log(category)
     const resultList = []
@@ -34,6 +34,7 @@ const eventService = {
       )
     console.log('resultList', resultList)
     return resultList
+
   },
   getList () {
     const resultList = []
@@ -69,6 +70,24 @@ const eventService = {
     return new Promise((resolve, reject) => {
       airtableBase(TABLE_NAME)
         .find(id, function (err, record) {
+          if (err) {
+            console.error(err)
+            reject(err)
+          }
+          const result = {
+            id: record.id,
+            ...record.fields
+          }
+          console.log('result', result)
+          resolve(result)
+        })
+    })
+  },
+  save(event) {
+    console.log('save', event)
+    return new Promise((resolve, reject) => {
+      airtableBase(TABLE_NAME)
+        .create(event, function (err, record) {
           if (err) {
             console.error(err)
             reject(err)

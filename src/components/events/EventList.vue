@@ -1,7 +1,14 @@
 <template>
   <div class="event-list">
-    <b-overlay :show="isLoading" rounded="sm">
-      <event-list-item v-for="event in events" :key="event.id" :event="event" />
+    <b-overlay
+      :show="isLoading"
+      rounded="sm"
+    >
+      <event-list-item
+        v-for="event in events"
+        :key="event.id"
+        :event="event"
+      />
     </b-overlay>
   </div>
 </template>
@@ -25,7 +32,7 @@ export default {
   },
   methods: {
     async loadEvents () {
-      this.events = await eventService.getSearchList("Fastnacht")
+      this.events = await eventService.getList()
       this.isLoading = false
     }
   }

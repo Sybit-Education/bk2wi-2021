@@ -4,7 +4,7 @@
     class="home"
   >
     <h1>Home</h1>
-    <event-list   />
+    <event-list />
   </div>
 </template>
 

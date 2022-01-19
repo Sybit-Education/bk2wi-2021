@@ -1,6 +1,10 @@
 <template>
   <div class="event-detail">
-    <b-overlay :show="isLoading" rounded="sm" no-wrap />
+    <b-overlay
+      :show="isLoading"
+      rounded="sm"
+      no-wrap
+    />
     <div v-if="event">
       <h1>{{ event.Eventname }}</h1>
 
@@ -19,16 +23,16 @@
       >
         <b-carousel-slide
           img-src="https://picsum.photos/1024/480/?image=52"
-        ></b-carousel-slide>
+        />
         <b-carousel-slide
           img-src="https://picsum.photos/1024/480/?image=54"
-        ></b-carousel-slide>
+        />
         <b-carousel-slide
           img-src="https://picsum.photos/1024/480/?image=55"
-        ></b-carousel-slide>
+        />
         <b-carousel-slide
           img-src="https://picsum.photos/1024/480/?image=58"
-        ></b-carousel-slide>
+        />
       </b-carousel>
 
       <b-row>
@@ -37,9 +41,13 @@
         <b-col>Beschreibung: {{ event.Description }}</b-col>
       </b-row>
       <b-row>
-        <b-button variant="success" href="/" target="_self"
-          >Zurück zur Startseite</b-button
+        <b-button
+          variant="success"
+          href="/"
+          target="_self"
         >
+          Zurück zur Startseite
+        </b-button>
       </b-row>
     </div>
   </div>
