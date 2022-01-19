@@ -1,6 +1,7 @@
 <template>
   <div class="event-new-view">
-    <event-form></event-form>
+    <h1>Neues Event einreichen</h1>
+    <event-form />
   </div>
 </template>
 
@@ -11,6 +12,3 @@ export default {
   name: 'EventNewView'
 }
 </script>
-
-<style>
-</style>
