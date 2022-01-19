@@ -41,6 +41,7 @@
               variant="outline-success"
               class="my-2 my-sm-0"
               type="submit"
+              @click="searchEvents"
             >
               Search
             </b-button>
@@ -79,6 +80,12 @@ export default {
   data () {
     return {
       searchbar
+    }
+  }
+  ,methods: {
+    async searchEvents () {
+      this.events = await eventService.getSearchList(this.searchbar)
+      this.isLoading = false
     }
   }
 }
