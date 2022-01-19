@@ -53,6 +53,24 @@ const eventService = {
           resolve(result)
         })
     })
+  },
+  save(event) {
+    console.log('save', event)
+    return new Promise((resolve, reject) => {
+      airtableBase(TABLE_NAME)
+        .create(event, function (err, record) {
+          if (err) {
+            console.error(err)
+            reject(err)
+          }
+          const result = {
+            id: record.id,
+            ...record.fields
+          }
+          console.log('result', result)
+          resolve(result)
+        })
+    })
   }
 }
 
