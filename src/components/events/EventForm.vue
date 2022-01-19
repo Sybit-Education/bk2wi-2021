@@ -1,37 +1,53 @@
 <template>
   <b-form class="event-form">
-    <b-form-group label="Name" label-for="name">
+    <b-form-group
+      label="Name"
+      label-for="name"
+    >
       <b-form-input
         id="name"
         v-model="event.Eventname"
         required
-      ></b-form-input>
+      />
     </b-form-group>
-    <b-form-group label="Ort" label-for="location">
+    <b-form-group
+      label="Ort"
+      label-for="location"
+    >
       <b-form-input
         id="location"
         v-model="event.location"
         required
-      ></b-form-input>
+      />
     </b-form-group>
-    <b-form-group label="Datum" label-for="date">
+    <b-form-group
+      label="Datum"
+      label-for="date"
+    >
       <b-form-input
         id="date"
         v-model="event.date"
         required
         type="date"
-      ></b-form-input>
+      />
     </b-form-group>
-    <b-form-group label="Beschreibung" label-for="description">
+    <b-form-group
+      label="Beschreibung"
+      label-for="description"
+    >
       <b-form-textarea
         id="description"
         v-model="event.Description"
         required
-      ></b-form-textarea>
+      />
     </b-form-group>
-    <b-button type="submit" variant="primary" @click="saveEvent"
-      >Speichern</b-button
+    <b-button
+      type="submit"
+      variant="primary"
+      @click="saveEvent"
     >
+      Speichern
+    </b-button>
   </b-form>
 </template>
 

@@ -10,7 +10,7 @@ const routes = [
     name: 'Home',
     component: Home
   },
- {
+  {
     path: '/new',
     name: 'New Event',
     component: () => import(/* webpackChunkName: "new" */ '../views/EventNewView.vue')
