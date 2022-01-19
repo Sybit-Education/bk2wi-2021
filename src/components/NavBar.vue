@@ -28,7 +28,7 @@
           </b-nav-item>
               <b-navbar type="light" variant="dark">
                 <b-nav-form>
-                  <b-form-input class="mr-sm-2" placeholder="Search"></b-form-input>
+                  <b-form-input class="mr-sm-2" placeholder="Search" v-model="searchbar"></b-form-input>
                 </b-nav-form>
               <b-button variant="outline-success" class="my-2 my-sm-0" type="submit">Search</b-button>
             </b-navbar>
@@ -48,6 +48,9 @@
               Mit Alkoholverkauf
             </b-nav-item>
             <b-nav-item >
+              Ohne Alkoholverkauf
+            </b-nav-item>
+            <b-nav-item >
               Festivals
             </b-nav-item>
         </b-navbar-nav>
@@ -57,8 +60,13 @@
 </template>
 
 <script>
+import eventService from '@/services/event.service'
 export default {
-  name: 'NavBar'
-
+  name: 'NavBar',
+  data(){
+    return{
+      searchbar
+    }
+  }
 }
 </script>
