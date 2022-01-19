@@ -1,3 +1,4 @@
+
 import airtableBase from './airtable.service'
 const TABLE_NAME = 'Event'
 const ACTIVE_VIEW = 'published'
@@ -6,11 +7,15 @@ const eventService = {
 
   getSearchList(category) {
     console.log(category)
+
     const resultList = []
     airtableBase(TABLE_NAME)
+    
       .select({
         view: ACTIVE_VIEW, 
-        filterByFormula: search(category,Event)
+        filterByFormula: `SEARCH('${category}',{Eventname})`
+
+         
       })
       .eachPage(
         function page (partialRecords, fetchNextPage) {
