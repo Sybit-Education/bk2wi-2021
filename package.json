@@ -18,22 +18,28 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.15",
-    "@vue/cli-plugin-eslint": "^4.5.15",
+    "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "^4.5.15",
     "@vue/cli-service": "^4.5.15",
-    "@vue/eslint-config-standard": "^6.1.0",
-    "@babel/eslint-parser": "^7.5.4",
-    "eslint": "^8.6.0",
-    "eslint-plugin-standard": "^5.0.0",
-    "eslint-plugin-import": "^2.25.3",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-vue": "^8.3.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "exports-loader": "^1.1.0",
     "node-sass": "^6.0.1",
     "sass-loader": "^10.2.0",
     "vue-cli-plugin-bootstrap-vue": "^0.8.2",
     "vue-template-compiler": "^2.6.14"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
   "lint-staged": {
     "*.js": [
       "npm run lint"
@@ -41,10 +47,5 @@
     "*.vue": [
       "npm run lint"
     ]
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }
