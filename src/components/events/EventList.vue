@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     async loadEvents () {
-      this.events = await eventService.getList()
+      this.events = await eventService.getSearchList("Fastnacht")
       this.isLoading = false
     }
   }
