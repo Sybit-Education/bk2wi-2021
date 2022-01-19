@@ -1,12 +1,11 @@
-import { base } from 'airtable'
 import airtableBase from './airtable.service'
 
 const TABLE_NAME = 'Event'
 const ACTIVE_VIEW = 'published'
 
 const eventService = {
-  getList(category){
-    return[]
+  getList (category) {
+    return []
   },
   getList () {
     const resultList = []

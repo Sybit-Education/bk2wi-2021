@@ -1,5 +1,8 @@
 <template>
-  <div v-once class="privacy">
+  <div
+    v-once
+    class="privacy"
+  >
     <h1>Datenschutz</h1>
   </div>
 </template>
