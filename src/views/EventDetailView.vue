@@ -34,7 +34,7 @@
       <br>
       <b-col>
         <div class="event-list-item_organizer">
-          Veranstallter: {{ event.FirstName }} {{ event.Name }}
+          Veranstalter: {{ event.FirstName }} {{ event.Name }}
         </div>
       </b-col>
       <br>
