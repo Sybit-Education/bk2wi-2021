@@ -9,27 +9,27 @@
     <b-button
       to="/new"
       class="newEventButton"
+      variant="danger"
     >
       <b-icon
-        icon="plus-circle"
-        aria-hidden="true"
-        variant="dark"
+        icon="plus"
+        aria-hidden="true"   
       />
     </b-button>
   </div>
 </template>
 <style scoped>
 .newEventButton{
+  width: 4.5rem;
+  height: 4.5rem;
   position: fixed;
   right: 1rem;
   z-index: 10;
-  bottom: 0.1rem;
+  bottom: 0.5rem;
   border-radius: 50%;
-  font-size: 1.4rem;
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
-  text-align: center;
- padding: 0.2rem;
+  font-size: 3rem;
+  padding: 0;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
 
 </style>
