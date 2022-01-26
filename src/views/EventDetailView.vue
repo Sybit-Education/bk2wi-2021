@@ -20,7 +20,7 @@
           </b-col>
         <br>
           <b-col> 
-            <div class="event-list-item_organizer">Veranstallter: {{ event.FirstName }} {{ event.Name }} </div>
+            <div class="event-list-item_organizer">Veranstalter: {{ event.FirstName }} {{ event.Name }} </div>
           </b-col>
           <br>
         <b-row>
