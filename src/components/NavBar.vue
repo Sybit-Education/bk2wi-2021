@@ -34,7 +34,7 @@
               <b-form-input
                 class="mr-sm-2"
                 placeholder="Search"
-                v-model="searchbar"
+                v-model="query"
               />
             </b-nav-form>
             <b-button
@@ -79,12 +79,12 @@ export default {
   name: 'NavBar',
   data () {
     return {
-      searchbar
+      query: null
     }
   },
   methods: {
     async searchEvents () {
-      this.events = await eventService.getSearchList(this.searchbar)
+      this.events = await eventService.getSearchList(this.query)
       this.isLoading = false
     }
   }
