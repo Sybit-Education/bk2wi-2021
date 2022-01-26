@@ -11,9 +11,10 @@
         fluid-grow
         alt="Fluid-grow image"
       />
-
-      <h1>{{ event.Eventname }}</h1>
-
+      <b-col>
+        <h4>{{ event.Eventname }}</h4>
+      </b-col>
+      <br>
       <b-col>
         <div class="event-list-item__date">
           Datum: {{ event.Date }}
@@ -34,19 +35,10 @@
       <br>
       <b-col>
         <div class="event-list-item_organizer">
-          Veranstalter: {{ event.FirstName }} {{ event.Name }}
+          Veranstallter: {{ event.FirstName }} {{ event.Name }}
         </div>
       </b-col>
       <br>
-      <b-row>
-        <b-button
-          variant="success"
-          href="/"
-          target="_self"
-        >
-          Zurück zur Startseite
-        </b-button>
-      </b-row>
     </div>
   </div>
 </template>
