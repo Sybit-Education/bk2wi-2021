@@ -14,26 +14,6 @@
 
       <h1>{{ event.Eventname }}</h1>
 
-<<<<<<< HEAD
-          <b-col>
-            <div class="event-list-item__date">Datum: {{ event.Date }}</div>
-            <div class="event-list-item__Time">Uhrzeit: {{ event.Time }}</div>
-            <div class="event-list-item__location">Wo: {{ event.location }}</div>
-            </b-col> 
-        <br>
-          <b-col>
-            <div class="event-list-item_description">{{ event.Description }}</div>
-          </b-col>
-        <br>
-          <b-col> 
-            <div class="event-list-item_organizer">Veranstalter: {{ event.FirstName }} {{ event.Name }} </div>
-          </b-col>
-          <br>
-        <b-row>
-          <b-button variant="success" href="/" target="_self">Zurück zur Startseite</b-button>
-        </b-row>
-      </div>
-=======
       <b-col>
         <div class="event-list-item__date">
           Datum: {{ event.Date }}
@@ -68,7 +48,6 @@
         </b-button>
       </b-row>
     </div>
->>>>>>> bc5e7b3d00af0cc9c394ac8e514c8fa91e4609ff
   </div>
 </template>
 
