@@ -13,13 +13,17 @@
     >
       <b-icon
         icon="plus"
-        aria-hidden="true"   
+        aria-hidden="true"
       />
     </b-button>
   </div>
 </template>
 <style scoped>
 .newEventButton{
+  color: rgb(255, 0, 0);
+  background-color: rgba(255, 0, 0, 0);
+  border-color: rgb(255, 0, 0);
+  border-width: 0.2rem;
   width: 4.5rem;
   height: 4.5rem;
   position: fixed;
