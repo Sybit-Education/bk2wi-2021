@@ -20,9 +20,9 @@
 </template>
 <style scoped>
 .newEventButton{
-  color: rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
   background-color: rgba(255, 0, 0, 0);
-  border-color: rgb(255, 0, 0);
+  border-color: rgba(255, 0, 0, 0);
   border-width: 0.2rem;
   width: 4.5rem;
   height: 4.5rem;
