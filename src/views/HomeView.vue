@@ -3,12 +3,15 @@
     v-once
     class="home"
   >
-    <b-input-group class="suchleisteAussehen">
+  <b-form @submit.prevent="searchEvents">
+    <b-input-group class="suchleisteAussehen">  
       <b-form-input
+        name="query"
         class="mr-sm-2"
         placeholder="Search..."
         v-model="query"
       />
+     
 
       <template #prepend>
         <b-dropdown
@@ -27,7 +30,6 @@
       <b-button
         variant="outline-secondary"
         type="submit"
-        @click="searchEvents"
       >
         <b-icon
           icon="check"
@@ -36,8 +38,9 @@
         />
       </b-button>
     </b-input-group>
+  </b-form>
 
-    <event-list />
+    <event-list :query = 'query'/>
     <b-button
       to="/new"
       class="newEventButton"
@@ -64,9 +67,9 @@ export default {
     }
   },
   methods: {
-    async searchEvents () {
-      this.events = await eventService.getSearchList(this.query)
-      this.isLoading = false
+    async searchEvents (value) {
+      console.log(value)
+      this.query = value
     }
   }
 }

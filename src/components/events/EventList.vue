@@ -39,7 +39,7 @@ export default {
   methods: {
     async loadEvents () {
       if (this.query == null) {
-        this.events = await eventService.getList(this.query)
+        this.events = await eventService.getList()
       } else {
         this.events = await eventService.getSearchList(this.query)
       }
