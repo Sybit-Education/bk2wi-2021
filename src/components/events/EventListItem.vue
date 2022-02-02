@@ -12,15 +12,9 @@
         </b-col>
         <b-col>
           <h3>{{ event.Eventname }}</h3>
-          <div class="event-list-item__date">
-            Datum: {{ eventDate }}
-          </div>
-          <div class="event-list-item__Time">
-            Uhrzeit: {{ eventTime }}
-          </div>
-          <div class="event-list-item__location">
-            Wo: {{ event.location }}
-          </div>
+          <div class="event-list-item__date">Datum: {{ eventDate }}</div>
+          <div class="event-list-item__Time">Uhrzeit: {{ eventTime }}</div>
+          <div class="event-list-item__location">Wo: {{ event.location }}</div>
         </b-col>
       </b-row>
     </b-card>
@@ -40,16 +34,24 @@ export default {
       return '/event/' + this.event.id
     },
     eventDate () {
-      const options = {
-        weekday: 'short',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
+      if (this.event.Date) {
+        const options = {
+          weekday: 'short',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }
+        return new Date(this.event.Date).toLocaleDateString('de-DE', options)
+      } else {
+        return 'Kein Datum angegeben'
       }
-      return new Date(this.event.Date).toLocaleDateString('de-DE', options)
     },
     eventTime () {
-      return new Date(this.event.Time * 1000).toISOString().substr(11, 5)
+      if (this.event.Time) {
+        return new Date(this.event.Time * 1000).toISOString().substr(11, 5)
+      } else {
+        return 'Keine Zeitangabe'
+      }
     }
   }
 }
