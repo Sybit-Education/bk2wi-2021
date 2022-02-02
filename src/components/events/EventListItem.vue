@@ -12,15 +12,9 @@
         </b-col>
         <b-col>
           <h3>{{ event.Eventname }}</h3>
-          <div class="event-list-item__date">
-            Datum: {{ eventDate }}
-          </div>
-          <div class="event-list-item__Time">
-            Uhrzeit: {{ eventTime }}
-          </div>
-          <div class="event-list-item__location">
-            Wo: {{ event.location }}
-          </div>
+          <div class="event-list-item__date">Datum: {{ eventDate }}</div>
+          <div class="event-list-item__Time">Uhrzeit: {{ eventTime }}</div>
+          <div class="event-list-item__location">Wo: {{ event.location }}</div>
         </b-col>
       </b-row>
     </b-card>
@@ -66,5 +60,8 @@ export default {
 .event-list-item {
   background-color: rgba(112, 108, 108, 0.199);
   color: black;
+}
+a:hover {
+  text-decoration: none;
 }
 </style>
