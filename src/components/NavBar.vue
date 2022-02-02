@@ -26,67 +26,11 @@
           <b-nav-item to="/about">
             Über
           </b-nav-item>
-          <b-navbar
-            type="light"
-            variant="dark"
-          >
-            <b-nav-form>
-              <b-form-input
-                class="mr-sm-2"
-                placeholder="Search"
-                v-model="query"
-              />
-            </b-nav-form>
-            <b-button
-              variant="outline-success"
-              class="my-2 my-sm-0"
-              type="submit"
-              @click="searchEvents"
-            >
-              Search
-            </b-button>
-          </b-navbar>
-          <b-nav-item>
-            Samstagabend
-          </b-nav-item>
-          <b-nav-item>
-            Freitagabend
-          </b-nav-item>
-          <b-nav-item>
-            Club
-          </b-nav-item>
-          <b-nav-item>
-            Ü18
-          </b-nav-item>
-          <b-nav-item>
-            Mit Alkoholverkauf
-          </b-nav-item>
-          <b-nav-item>
-            Ohne Alkoholverkauf
-          </b-nav-item>
-          <b-nav-item>
-            Festivals
-          </b-nav-item>
+          <b-nav-item />
         </b-navbar-nav>
       </b-collapse>
     </b-container>
   </b-navbar>
 </template>
 
-<script>
-import eventService from '@/services/event.service'
-export default {
-  name: 'NavBar',
-  data () {
-    return {
-      query: null
-    }
-  },
-  methods: {
-    async searchEvents () {
-      this.events = await eventService.getSearchList(this.query)
-      this.isLoading = false
-    }
-  }
-}
-</script>
+

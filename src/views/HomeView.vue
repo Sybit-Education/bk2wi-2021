@@ -3,7 +3,39 @@
     v-once
     class="home"
   >
-    <h1>Home</h1>
+    <b-input-group class="suchleisteAussehen">
+      <b-form-input
+        class="mr-sm-2"
+        placeholder="Search..."
+        v-model="query"
+      />
+
+      <template #prepend>
+        <b-dropdown
+          text="Tags"
+          variant="outline-secondary"
+        >
+          <b-dropdown-item>Freitagabend</b-dropdown-item>
+          <b-dropdown-item>Samstagabend</b-dropdown-item>
+          <b-dropdown-item>Club</b-dropdown-item>
+          <b-dropdown-item> Ü18</b-dropdown-item>
+          <b-dropdown-item> Mit Alkoholverkauf</b-dropdown-item>
+          <b-dropdown-item>Ohne Alkoholverkauf</b-dropdown-item>
+          <b-dropdown-item>Festivals</b-dropdown-item>
+        </b-dropdown>
+      </template>
+      <b-button
+        variant="outline-secondary"
+        type="submit"
+        @click="searchEvents"
+      >
+        <b-icon
+          icon="check"
+          aria-hidden="true"
+          variant="success"
+        />
+      </b-button>
+    </b-input-group>
 
     <event-list />
     <b-button
@@ -18,6 +50,28 @@
     </b-button>
   </div>
 </template>
+
+<script>
+import EventList from '@/components/events/EventList.vue'
+import eventService from '@/services/event.service'
+export default {
+  name: 'HomeView',
+  components: { EventList },
+
+  data () {
+    return {
+      query: null
+    }
+  },
+  methods: {
+    async searchEvents () {
+      this.events = await eventService.getSearchList(this.query)
+      this.isLoading = false
+    }
+  }
+}
+
+</script>
 <style scoped>
 .newEventButton{
   color: rgb(219, 34, 34);
@@ -35,14 +89,14 @@
   padding: 0;
   border-color: red;
 }
+.suchleisteAussehen{
+  border: black;
+  position: sticky;
+  background-color: white;
+  z-index: 9;
+  right: 0rem;
+  top: 0rem;
+
+}
 
 </style>
-
-<script>
-import EventList from '@/components/events/EventList.vue'
-
-export default {
-  name: 'HomeView',
-  components: { EventList }
-}
-</script>
