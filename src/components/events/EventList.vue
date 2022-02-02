@@ -21,6 +21,12 @@ export default {
   components: {
     EventListItem
   },
+  props: {
+    query: {
+      type: String,
+      default: null
+    }
+  },
   data () {
     return {
       events: [],
@@ -32,7 +38,11 @@ export default {
   },
   methods: {
     async loadEvents () {
-      this.events = await eventService.getList()
+      if (this.query == null) {
+        this.events = await eventService.getList(this.query)
+      } else {
+        this.events = await eventService.getSearchList(this.query)
+      }
       this.isLoading = false
     }
   }
