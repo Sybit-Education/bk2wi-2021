@@ -32,5 +32,3 @@
     </b-container>
   </b-navbar>
 </template>
-
-

@@ -13,7 +13,7 @@ const eventService = {
 
       .select({
         view: ACTIVE_VIEW,
-        filterByFormula: `SEARCH('${category}',{Eventname})`
+        filterByFormula: `SEARCH(LOWER('${category}'),LOWER({Eventname}))`
 
       })
       .eachPage(
