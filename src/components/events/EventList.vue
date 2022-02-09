@@ -11,7 +11,7 @@
 
         <template #prepend>
           <b-dropdown
-            text="Tags"
+            text="Filter"
             variant="outline-secondary"
           >
             <b-dropdown-item>Freitagabend</b-dropdown-item>
@@ -84,10 +84,10 @@ export default {
 <style scoped>
 .search-bar {
   border: black;
-  position: sticky;
   background-color: white;
   z-index: 9;
   right: 0rem;
   top: 0rem;
+  
 }
 </style>
