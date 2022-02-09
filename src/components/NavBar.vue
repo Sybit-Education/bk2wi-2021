@@ -11,7 +11,7 @@
       >
         <b-img
           class="d-inline-block align-top"
-          src="https://dummyimage.com/30/878787/000000&text=Logo"
+          src="/img/logo.jpg"
           height="30"
           alt="event-app Logo"
         />
