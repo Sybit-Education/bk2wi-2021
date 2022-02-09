@@ -1,41 +1,42 @@
 <template>
   <div class="event-list">
-    <b-form @submit.prevent="loadEvents">
-      <b-input-group class="seearch-bar">
-        <b-form-input
-          name="query"
-          class="mr-sm-2"
-          placeholder="Search..."
-          v-model="query"
-        />
-
-        <template #prepend>
-          <b-dropdown
-            text="Filter"
-            variant="outline-secondary"
-          >
-            <b-dropdown-item>Freitagabend</b-dropdown-item>
-            <b-dropdown-item>Samstagabend</b-dropdown-item>
-            <b-dropdown-item>Club</b-dropdown-item>
-            <b-dropdown-item> Ü18</b-dropdown-item>
-            <b-dropdown-item> Mit Alkoholverkauf</b-dropdown-item>
-            <b-dropdown-item>Ohne Alkoholverkauf</b-dropdown-item>
-            <b-dropdown-item>Festivals</b-dropdown-item>
-          </b-dropdown>
-        </template>
-        <b-button
-          variant="outline-secondary"
-          type="submit"
-        >
-          <b-icon
-            icon="check"
-            aria-hidden="true"
-            variant="success"
+    <div class="search-bar">
+      <b-form @submit.prevent="loadEvents">
+        <b-input-group>
+          <b-form-input
+            name="query"
+            class="mr-sm-2"
+            placeholder="Search..."
+            v-model="query"
           />
-        </b-button>
-      </b-input-group>
-    </b-form>
 
+          <template #prepend>
+            <b-dropdown
+              text="Filter"
+              variant="outline-secondary"
+            >
+              <b-dropdown-item>Freitagabend</b-dropdown-item>
+              <b-dropdown-item>Samstagabend</b-dropdown-item>
+              <b-dropdown-item>Club</b-dropdown-item>
+              <b-dropdown-item> Ü18</b-dropdown-item>
+              <b-dropdown-item> Mit Alkoholverkauf</b-dropdown-item>
+              <b-dropdown-item>Ohne Alkoholverkauf</b-dropdown-item>
+              <b-dropdown-item>Festivals</b-dropdown-item>
+            </b-dropdown>
+          </template>
+          <b-button
+            variant="outline-secondary"
+            type="submit"
+          >
+            <b-icon
+              icon="check"
+              aria-hidden="true"
+              variant="success"
+            />
+          </b-button>
+        </b-input-group>
+      </b-form>
+    </div>
     <b-overlay
       :show="isLoading"
       rounded="sm"
@@ -83,11 +84,14 @@ export default {
 
 <style scoped>
 .search-bar {
-  border: black;
   background-color: white;
+  top: 0;
+  position: sticky;
   z-index: 9;
-  right: 0rem;
-  top: 0rem;
-  
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.event-list{
+  height: 100%;
 }
 </style>
