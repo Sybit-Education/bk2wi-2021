@@ -1,5 +1,6 @@
 <template>
-  <b-navbar class="navbarStyle"
+  <b-navbar
+    class="navbarStyle"
     type="dark"
     variant="info"
     toggleable="md"

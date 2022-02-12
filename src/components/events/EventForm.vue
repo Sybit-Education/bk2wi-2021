@@ -4,12 +4,34 @@
     @submit.prevent="saveEvent"
   >
     <b-form-group
-      label="Name"
+      label="Event Name"
+      label-for="event name"
+    >
+      <b-form-input
+        id="event-name"
+        v-model="event.Eventname"
+        required
+      />
+    </b-form-group>
+
+    <b-form-group
+      label="Vorname"
+      label-for="FirstName"
+    >
+      <b-form-input
+        id="firstname"
+        v-model="event.FirstName"
+        required
+      />
+    </b-form-group>
+
+    <b-form-group
+      label="Nachname"
       label-for="name"
     >
       <b-form-input
-        id="name"
-        v-model="event.Eventname"
+        id="Name"
+        v-model="event.Name"
         required
       />
     </b-form-group>
@@ -61,6 +83,8 @@ export default {
     return {
       event: {
         Eventname: '',
+        firstname: '',
+        lastname: '',
         location: '',
         Date: null,
         Description: '',
