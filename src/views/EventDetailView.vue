@@ -6,6 +6,7 @@
       no-wrap
     />
     <div v-if="event">
+      <br>
       <b-img
         src="https://via.placeholder.com/850x450.png?text=Bild"
         fluid-grow
