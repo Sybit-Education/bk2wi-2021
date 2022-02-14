@@ -6,37 +6,25 @@
       no-wrap
     />
     <div v-if="event">
+      <br>
       <b-img
-        src="https://via.placeholder.com/150?text=Bild"
+        src="https://via.placeholder.com/850x310.png?text=Bild"
         fluid-grow
         alt="Fluid-grow image"
       />
-
       <h4>{{ event.Eventname }}</h4>
-
-      <b-col>
-        <div class="event-list-item__date">
-          Datum: {{ event.Date }}
-        </div>
-        <div class="event-list-item__Time">
-          Uhrzeit: {{ event.Time }}
-        </div>
-        <div class="event-list-item__location">
-          Wo: {{ event.location }}
-        </div>
-      </b-col>
       <br>
-      <b-col>
-        <div class="event-list-item_description">
-          {{ event.Description }}
-        </div>
-      </b-col>
+      <p>
+        Datum: {{ event.Date }}
+        <br>
+        Uhrzeit: {{ event.Time }}
+        <br>
+        Wo: {{ event.location }}
+      </p>
       <br>
-      <b-col>
-        <div class="event-list-item_organizer">
-          Veranstallter: {{ event.FirstName }} {{ event.Name }}
-        </div>
-      </b-col>
+      <p>{{ event.Description }}</p>
+      <br>
+      <p>Veranstalter: {{ event.FirstName }} {{ event.Name }}</p>
       <br>
       <b-row>
         <b-button
@@ -53,6 +41,7 @@
 
 <script>
 import eventService from '@/services/event.service'
+
 export default {
   name: 'EventDetailView',
   data () {
@@ -73,3 +62,10 @@ export default {
   }
 }
 </script>
+
+<style>
+b.img{
+  height: 0rem;
+  width: 0rem;
+}
+</style>

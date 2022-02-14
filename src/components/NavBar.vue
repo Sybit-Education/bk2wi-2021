@@ -1,7 +1,8 @@
 <template>
   <b-navbar
+    class="navbarStyle"
     type="dark"
-    variant="dark"
+    variant="info"
     toggleable="md"
   >
     <b-container>
@@ -11,8 +12,8 @@
       >
         <b-img
           class="d-inline-block align-top"
-          src="https://dummyimage.com/30/878787/000000&text=Logo"
-          height="30"
+          src="/img/Logo.png"
+          height="45"
           alt="event-app Logo"
         />
         Event4U
@@ -35,5 +36,3 @@
     </b-container>
   </b-navbar>
 </template>
-
-
