@@ -8,7 +8,9 @@
     <div v-if="event">
       <br>
       <b-img
-        src="https://via.placeholder.com/850x450.png?text=Bild"
+        src="https://via.placeholder.com/950x280.png?text=Bild"
+        height="5rem"
+        width="5rem"
         fluid-grow
         alt="Fluid-grow image"
       />
