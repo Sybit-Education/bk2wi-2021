@@ -83,8 +83,8 @@ export default {
     return {
       event: {
         Eventname: '',
-        firstname: '',
-        lastname: '',
+        FirstName: '',
+        Name: '',
         location: '',
         Date: null,
         Description: '',
