@@ -15,9 +15,9 @@
       <h4>{{ event.Eventname }}</h4>
       <br>
       <p>
-        Datum: {{ event.Date }}
+        Datum: {{ eventDate }}
         <br>
-        Uhrzeit: {{ event.Time }}
+        Uhrzeit: {{ eventTime }} Uhr
         <br>
         Wo: {{ event.location }}
       </p>
@@ -40,6 +40,7 @@
 </template>
 
 <script>
+
 import eventService from '@/services/event.service'
 
 export default {
@@ -49,6 +50,29 @@ export default {
       event: null,
       eventId: this.$route.params.id,
       isLoading: true
+    }
+  },
+  computed: {
+
+    eventDate () {
+      if (this.event.Date) {
+        const options = {
+          weekday: 'short',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }
+        return new Date(this.event.Date).toLocaleDateString('de-DE', options)
+      } else {
+        return 'Kein Datum angegeben'
+      }
+    },
+    eventTime  () {
+      if (this.event.Time) {
+        return new Date(this.event.Time * 1000).toISOString().substr(11, 5)
+      } else {
+        return 'Keine Angabe'
+      }
     }
   },
   mounted () {
@@ -62,10 +86,3 @@ export default {
   }
 }
 </script>
-
-<style>
-b.img{
-  height: 0rem;
-  width: 0rem;
-}
-</style>
