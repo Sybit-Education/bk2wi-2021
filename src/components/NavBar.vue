@@ -12,7 +12,7 @@
       >
         <b-img
           class="d-inline-block align-top"
-          src="/img/HomeLogo.jpg"
+          src="/img/Logo.png"
           height="30"
           alt="event-app Logo"
         />
