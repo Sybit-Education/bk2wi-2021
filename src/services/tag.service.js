@@ -1,12 +1,14 @@
 import airtableBase from './airtable.service'
 const TABLE_NAME = 'Tag'
-
+const ACTIVE_VIEW = 'published'
 const tagService = {
 
   getTagList () {
     const resultTagList = []
     airtableBase(TABLE_NAME)
-      .select()
+      .select({
+        view: ACTIVE_VIEW
+      })
       .eachPage(
         function page (partialRecords, fetchNextPage) {
           // This function (`page`) will get called for each page of records.

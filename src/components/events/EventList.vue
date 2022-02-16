@@ -15,13 +15,12 @@
               text="Filter"
               variant="outline-secondary"
             >
-              <b-dropdown-item>Freitagabend</b-dropdown-item>
-              <b-dropdown-item>Samstagabend</b-dropdown-item>
-              <b-dropdown-item>Club</b-dropdown-item>
-              <b-dropdown-item> Ü18</b-dropdown-item>
-              <b-dropdown-item> Mit Alkoholverkauf</b-dropdown-item>
-              <b-dropdown-item>Ohne Alkoholverkauf</b-dropdown-item>
-              <b-dropdown-item>Festivals</b-dropdown-item>
+              <b-dropdown-item
+                v-for="tag in tags"
+                :key="tag.id"
+              >
+                {{ tag.Name }}
+              </b-dropdown-item>
             </b-dropdown>
           </template>
           <b-button
@@ -62,13 +61,14 @@ export default {
   data () {
     return {
       query: null,
+      tags: [],
       events: [],
       isLoading: true
     }
   },
   mounted () {
     this.loadEvents()
-    this.loadTag()
+    this.loadTags()
   },
   methods: {
     async loadEvents () {
@@ -80,8 +80,8 @@ export default {
       }
       this.isLoading = false
     },
-    async loadTag () {
-      await tagService.getTagList()
+    async loadTags () {
+      this.tags = await tagService.getTagList()
     }
   }
 }
