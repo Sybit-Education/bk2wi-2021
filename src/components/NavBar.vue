@@ -27,7 +27,7 @@
           <b-nav-item to="/about">
             Über
           </b-nav-item>
-          <b-nav-item to="/imprint">
+          <b-nav-item to="/impressum">
             Impressum
           </b-nav-item>
           <b-nav-item />

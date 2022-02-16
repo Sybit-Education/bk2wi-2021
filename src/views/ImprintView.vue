@@ -1,7 +1,7 @@
 <template>
   <div
     v-once
-    class="imprint"
+    class="impressum"
   >
     <h1>Impressum</h1>
 
@@ -40,3 +40,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.imprint{
+  color: black;
+}
+</style>
