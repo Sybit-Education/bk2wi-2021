@@ -52,6 +52,7 @@
 <script>
 import EventListItem from '@/components/events/EventListItem.vue'
 import eventService from '@/services/event.service'
+import tagService from '@/services/tag.service'
 
 export default {
   name: 'EventList',
@@ -67,6 +68,7 @@ export default {
   },
   mounted () {
     this.loadEvents()
+    this.loadTag()
   },
   methods: {
     async loadEvents () {
@@ -77,6 +79,9 @@ export default {
         this.events = await eventService.getSearchList(this.query)
       }
       this.isLoading = false
+    },
+    async loadTag () {
+      await tagService.getTagList()
     }
   }
 }
