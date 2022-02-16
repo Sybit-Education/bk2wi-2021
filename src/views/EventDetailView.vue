@@ -28,7 +28,7 @@
       <br>
       <b-row>
         <b-button
-          variant="success"
+          variant="dark"
           href="/"
           target="_self"
         >
