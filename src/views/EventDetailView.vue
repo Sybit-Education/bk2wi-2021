@@ -17,7 +17,7 @@
       <p>
         Datum: {{ eventDate }}
         <br>
-        Uhrzeit: {{ eventTime }} Uhr
+        Uhrzeit: {{ eventTime }}
         <br>
         Wo: {{ event.location }}
       </p>
