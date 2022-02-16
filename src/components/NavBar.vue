@@ -12,8 +12,8 @@
       >
         <b-img
           class="d-inline-block align-top"
-          src="/img/Logo.png"
-          height="45"
+          src="/img/HomeLogo.jpg"
+          height="30"
           alt="event-app Logo"
         />
         Event4U
