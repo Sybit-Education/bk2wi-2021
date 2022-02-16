@@ -26,7 +26,7 @@ export default {
 </script>
 <style scoped>
 .add-event-button {
-  color: rgb(219, 34, 34);
+  color: #5cb85c;
   background-color: rgba(255, 255, 255, 100);
   border-color: rgba(255, 0, 0, 0);
   border-width: 0.2rem;
@@ -39,6 +39,6 @@ export default {
   border-radius: 50%;
   font-size: 2.85rem;
   padding: 0;
-  border-color: red;
+  border-color: #5cb85c;
 }
 </style>
