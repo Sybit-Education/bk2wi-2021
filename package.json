@@ -30,7 +30,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^6.2.2",
-    "exports-loader": "^1.1.0",
+    "exports-loader": "^3.1.0",
     "node-sass": "^6.0.1",
     "sass-loader": "^10.2.0",
     "vue-cli-plugin-bootstrap-vue": "^0.8.2",
