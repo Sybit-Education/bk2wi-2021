@@ -64,7 +64,7 @@ export default {
 </script>
 <style scoped>
 .event-list-item {
-  background-color: #5493b1;
+  background-color: #17a3b870;
   color: black;
 }
 a:hover {
