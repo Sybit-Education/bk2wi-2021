@@ -7,7 +7,7 @@
     <b-button
       to="/new"
       class="add-event-button"
-      variant="danger"
+      variant="success"
     >
       <b-icon
         icon="plus"
