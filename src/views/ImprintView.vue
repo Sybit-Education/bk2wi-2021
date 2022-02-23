@@ -30,11 +30,11 @@
     <h2>EU-Streitschlichtung</h2>
     <p>
       Die Europäische Kommission stellt einer Plattform zur Online-Streitbeteiligung (OS) bereit:<br>
-      https://ec.europa.eu/consumers/odr/.<br>
+      <a href="https://ec.europa.eu/consumers/odr/" style="color: #00f">https://ec.europa.eu/consumers/odr/</a><br>
       Unsere E-Mail-Adresse finden Sie oben im Impressum.
     </p>
 
-    <h2>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
+    <h2>Verbraucherstreitbeilegung/ Universalschlichtungsstelle</h2>
     <p>Wir sind nicht bereit oder verpflichtet, an Streitbeteiligungsverfahren oder einer Verbraucherschlichtungsstelle teilzunehmen.</p>
   </div>
 </template>
