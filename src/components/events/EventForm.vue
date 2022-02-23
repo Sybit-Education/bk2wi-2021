@@ -68,7 +68,7 @@
     </b-form-group>
     <b-button
       type="submit"
-      variant="danger"
+      variant="success"
     >
       Speichern
     </b-button>
