@@ -4,7 +4,7 @@
     class="about"
   >
     <h1>
-      Über uns:<b-button class="secret">
+      Über uns:<b-button class="secret" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" >
         Secret
       </b-button>
     </h1>
