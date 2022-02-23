@@ -30,6 +30,9 @@ export default {
   color: white;
   size: 200px;
   background-color: white;
-
+   border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom-style: hidden;
 }
 </style>
