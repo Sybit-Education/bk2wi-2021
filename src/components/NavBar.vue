@@ -16,7 +16,7 @@
           height="30"
           alt="event-app Logo"
         />
-        Event4U
+        Events4U
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse" />
       <b-collapse
